@@ -1,3 +1,7 @@
+"""
+promptで入力されたワードを基にOpenAIのモデルを使って画像生成、ファイル名を指定して画像を保存するスクリプト
+"""
+
 import openai
 import os
 from PIL import Image
@@ -12,7 +16,7 @@ openai.api_key = os.getenv("openai_api_key")
 # テキストプロンプトを設定
 prompt = 'A walking chicken.'
 
-# Stable Diffusionモデルを使用して画像を生成
+# OpenAIのモデルを使用して画像を生成
 response = openai.Image.create(
   prompt=prompt,
   size="512x512",   # 画像のサイズを文字列で設定
